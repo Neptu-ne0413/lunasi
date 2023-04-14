@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="UTF-8">
     <title>検索結果</title>
     <link rel="stylesheet" type="text/css" href="style.css">
