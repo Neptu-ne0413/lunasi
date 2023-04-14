@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>英和辞書</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <h1>英和辞書</h1>
-    <form method="get" action="search.php">
-      <input type="text" name="word" placeholder="検索したい単語を入力してください">
-      <input type="submit" value="検索">
-    </form>
-    <div id="result"></div>
-  </body>
-  <script src="script.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<title>英和辞書</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>英和辞書</h1>
+		<form action="search.php" method="get">
+			<input type="text" name="word" placeholder="検索する単語を入力してください">
+			<input type="submit" value="検索">
+		</form>
+		<hr>
+		<h2>単語一覧</h2>
+		<ul>
+			<?php include 'words.php'; ?>
+		</ul>
+	</div>
+</body>
 </html>
