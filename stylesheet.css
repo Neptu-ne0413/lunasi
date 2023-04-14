@@ -4,4 +4,10 @@ h1 {
 
 form {
   text-align: center;
+  margin-top: 20px;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
 }
