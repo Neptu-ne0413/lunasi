@@ -1,48 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>英和辞書</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<h1>英和辞書</h1>
-	</header>
-	<main>
-		<form method="post" action="search.php">
-			<input type="text" name="word" placeholder="検索">
-			<input type="submit" value="検索">
-		</form>
-		<div class="result">
-			<h2>Result</h2>
-			<p>検索結果をここに表示</p>
-		</div>
-	</main>
-	    <?php
-      $dictionary = array(
-        "りんご" => "apple",
-        "バナナ" => "banana",
-        "チェリー" => "cherry",
-        "ドラゴンフルーツ" => "dragon fruit",
-        "エッグフルーツ" => "egg fruit",
-        "フィグ" => "fig",
-        "グレープフルーツ" => "grapefruit",
-        "ハニーデュー" => "honeydew",
-        "アイスクリームビーン" => "ice cream bean",
-        "ジャックフルーツ" => "jackfruit"
-      );
-
-      $search_word = $_GET["word"];
-
-      if (array_key_exists($search_word, $dictionary)) {
-        echo "<p>" . $search_word . "の英語は「" . $dictionary[$search_word] . "」です。</p>";
-      } else {
-        echo "<p>「" . $search_word . "」は辞書にありません。</p>";
-      }
-    ?>
-	<footer>
-		<p>&copy; 2023 英和辞書</p>
-	</footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>英和辞書</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>英和辞書</h1>
+    <form method="get" action="search.php">
+      <input type="text" name="word" placeholder="検索したい単語を入力してください">
+      <input type="submit" value="検索">
+    </form>
+  </body>
 </html>
